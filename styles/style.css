@@ -11,7 +11,6 @@
 .header {
   display:grid;
   grid-template-rows: 1fr min-content 1fr;
-  justify-content: space-between;
   block-size: 100vh;
   position: relative;
   padding: 20px; /*поменять в медиазапросах*/
@@ -146,6 +145,7 @@
   font-weight: 700;
   line-height: 23.4px; /* 130% */
   block-size: auto;
+  font-size: 18px;
 }
 
 .header__text {
@@ -163,12 +163,12 @@
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 23.4px; 
+  line-height: 23.4px;
 }
 
 .content__section {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 2fr;
   grid-template-rows: 1fr auto;
 } /*медиазапросы*/
 
@@ -176,6 +176,11 @@
   grid-auto-flow: row;
   column-gap: 20px;
 }/*медиазапросы*/
+
+.row {
+  grid-auto-flow: column;
+  row-gap: 20px;
+}
 
 .content__question {
   font-size: 18px;
@@ -185,7 +190,7 @@
 .content__list-column {
   display: flex;
   flex-direction: column;
-  gap: 20px; 
+  gap: 20px;
 }
 
 .content__answer {
@@ -218,11 +223,6 @@
   outline: 1px solid currentColor;
 }
 
-.row {
-  grid-auto-flow: column;
-  row-gap: 20px;
-}
-
 .content__list-row {
   display: grid;
   gap: 20px;
@@ -230,12 +230,13 @@
   grid-column: span 2;
 }
 
+.article__answer {
+  display: grid;
+  row-gap: 20px;
+}
+
 .subtitle {
-  margin-block-end: 10px;
-  font-size: 18px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 23.4px; /* 130% */
 }
 
 .content__gallery {
@@ -307,7 +308,7 @@
   }
 
   .header {
-    padding: 10px; 
+    padding: 10px;
   }
 
   .rec {
@@ -316,17 +317,17 @@
   }
 
   .decorated-zone::before {
-    inset-inline-end: 10px; 
-    inset-block-start: 10px; 
+    inset-inline-end: 10px;
+    inset-block-start: 10px;
   }
   
   .decorated-zone::after {
-    inset-block-end: 10px; 
-    inset-inline-start: 10px; 
+    inset-block-end: 10px;
+    inset-inline-start: 10px;
   }
 
   .tittle {
-    inset-inline-start: 0; 
+    inset-inline-start: 0;
   }
 
   .content {
@@ -341,12 +342,12 @@
   
   .column {
     grid-auto-flow: row;
-    gap: 10px;
-  }
-
+    gap: 20px;
+  }/*медиазапросы*/
+  
   .row {
-    grid-auto-flow: row;
-    gap: 10px;
+    grid-auto-flow: column;
+    gap: 20px;
   }
 
   .content__gallery {
