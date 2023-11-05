@@ -1,11 +1,10 @@
 .page.theme_dark {
   --color-accent: #DB00FF;
   --color-bright: #FF0070;
-  --color-shadow: #FF0070; 
   --color-light: #F1B2CE;
   --color-dark: #000028;
   --color__tittle: var(--color-accent, #DB00FF);
-  --color__tittle-shadow: var(--color-shadow, #FF0070);
+  --color__tittle-shadow: var(--color-bright, #FF0070);
   --color__decoration: var(--color-bright,#FF0070);
   --color__background-text: var(--color-bright, #FF0070);
   --color__question: var(--color-bright, #FF0070);
@@ -20,11 +19,10 @@
   :root {
     --color-accent: #DB00FF;
     --color-bright: #FF0070;
-    --color-shadow: #FF0070; 
     --color-light: #F1B2CE;
     --color-dark: #000028;
     --color__tittle: var(--color-accent, #DB00FF);
-    --color__tittle-shadow: var(--color-shadow, #FF0070);
+    --color__tittle-shadow: var(--color-bright, #FF0070);
     --color__decoration: var(--color-bright,#FF0070);
     --color__background-text: var(--color-bright, #FF0070);
     --color__question: var(--color-bright, #FF0070);
