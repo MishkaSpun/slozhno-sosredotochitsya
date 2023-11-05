@@ -1,5 +1,368 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: flex;
+  flex-direction: column;
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--background-color);
+}
+
+.header {
+  display:grid;
+  grid-template-rows: 1fr min-content 1fr;
+  justify-content: space-between;
+  block-size: 100vh;
+  position: relative;
+  padding: 20px; /*поменять в медиазапросах*/
+  font-family: var(--page-font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.header__theme-menu {
+  position: relative; /*еренести в медиазапросах*/
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;/*медиазапросы*/
+  gap: 10px; /*медиазапросы*/
+}
+
+.header__theme-menu-item {
+  padding-inline-start: 13px;
+  padding-inline-end: 13px;
+}
+
+.header__theme-menu-button {
+  border: 1px solid transparent;
+  padding: 2px 12px;
+  color: var(--color__decoration);
+  line-height: 18px;
+  text-transform: lowercase;
+  background: transparent;
+  cursor: pointer;
+}
+
+.header__theme-menu-button_type_light {
+  text-align: end;
+}
+
+.header__theme-menu-button_active {
+  border-color: currentColor;
+  cursor: default;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:hover {
+  border-color: var(--color__decoration);
+}
+
+.header__theme-menu-button:focus {
+  outline: 0;
+}
+
+.header__theme-menu-button:focus-visible {
+  border-block-end-color: currentColor;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inline-size: 25px;
+  block-size: 25px;
+}
+
+.decorated-zone::before {
+  border-inline-end: 1px solid var(--color__decoration);
+  border-block-start: 1px solid var(--color__decoration);
+  inset-inline-end: 20px; /*медиазапросы*/
+  inset-block-start: 20px; /*медиазапросы*/
+}
+
+.decorated-zone::after {
+  border-inline-start: 1px solid var(--color__decoration);
+  border-block-end: 1px solid var(--color__decoration);
+  inset-block-end: 20px; /*медиазапросы*/
+  inset-inline-start: 20px; /*медиазапросы*/
+}
+
+.rec {
+  position: absolute;
+  z-index: 1;
+  visibility: var(--rec-visibility);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  inset-inline-end: 29px;/*медиазапросы*/
+  inset-block-start: 20px;/*медиазапросы*/
+}
+
+.rec::before {
+  content: "REC";
+  color: var(--color__decoration);
+  line-height: 25px;
+}
+
+.rec::after {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 2px var(--color__decoration);
+  background: var(--color__decoration);
+  inline-size: 9px;
+  block-size: 9px;
+}
+
+.tittle {
+  color: var(--color__tittle);
+  font-family: var(--page-font-family);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  line-height: 82.5%; /* 129.525px */
+  align-items: center;
+  position: relative;
+  inset-inline-start: -2vw; /*медиазапросы*/
+}
+
+.header__tittle {
+  display: flex;
+  text-shadow: 4px 4px 0px var(--color__tittle-shadow);
+}
+
+.header__content {
+  display: grid;
+  align-self: center;
+}
+
+.tittle__decor {
+  background-color: var(--color__background-text);
+  color: var(--color__answer-tittle);
+  font-weight: 700;
+  line-height: 23.4px; /* 130% */
+  block-size: auto;
+}
+
+.header__text {
+  display: inline-block;
+  justify-self: end;
+  inline-size: clamp(364px, calc(100%/2), 491px);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 60px 20px; /*медиазапросы*/
+  font-family: var(--page-font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23.4px; 
+}
+
+.content__section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr auto;
+} /*медиазапросы*/
+
+.column {
+  grid-auto-flow: row;
+  column-gap: 20px;
+}/*медиазапросы*/
+
+.content__question {
+  font-size: 18px;
+  color: var(--color__question);
+}
+
+.content__list-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.content__answer {
+  display: grid;
+  gap: 10px;
+}
+
+.answer__text {
+  color: var( --color__answer-text);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0px var(--color__tittle-shadow);
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.link:focus {
+  outline: 0;
+}
+
+.link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.row {
+  grid-auto-flow: column;
+  row-gap: 20px;
+}
+
+.content__list-row {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: span 2;
+}
+
+.subtitle {
+  margin-block-end: 10px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23.4px; /* 130% */
+}
+
+.content__gallery {
+  display: grid;
+  row-gap: 20px;
+  grid-template-rows: 1fr auto;
+  font-size: 18px;
+  }
+  
+.gallery__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: row dense;
+  gap: 20px;
+} /*медиазапросы*/
+
+.gallery__list-item:first-child,
+.gallery__list-item:last-child {
+  grid-column-start: span 2;
+} /*медиазапросы*/
+
+.gallery__list-item:nth-child(2),
+.gallery__list-item:nth-child(3) {
+  grid-row-start: span 2;
+} /*медиазапросы*/
+
+.gallery__list-item-picture {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  position: relative;
+  padding: 20px;
+}
+
+.footer__tittle {
+  display: flex;
+  text-shadow: 2px 2px 0px var(--color__tittle-shadow);
+}
+
+@media (width < 1024px) {
+  .header__theme-menu {
+    justify-self: end;
+    inset-block-start: 192px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 13px; /*медиазапросы*/
+  }
+
+  .content__list-row {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (width < 768px) {
+  .header__theme-menu {
+    inset-block-start: 75px;
+  }
+
+  .header {
+    padding: 10px; 
+  }
+
+  .rec {
+    inset-inline-end: 19px;/*медиазапросы*/
+    inset-block-start: 10px;/*медиазапросы*/
+  }
+
+  .decorated-zone::before {
+    inset-inline-end: 10px; 
+    inset-block-start: 10px; 
+  }
+  
+  .decorated-zone::after {
+    inset-block-end: 10px; 
+    inset-inline-start: 10px; 
+  }
+
+  .tittle {
+    inset-inline-start: 0; 
+  }
+
+  .content {
+    gap: 50px;
+    padding: 40px 10px; /*медиазапросы*/
+  }
+  
+  .content__section {
+    display: flex;
+    flex-direction: column;
+  } 
+  
+  .column {
+    grid-auto-flow: row;
+    gap: 10px;
+  }
+
+  .row {
+    grid-auto-flow: row;
+    gap: 10px;
+  }
+
+  .content__gallery {
+    display: grid;
+    grid-template-rows: auto auto;
+    font-size: 18px;
+    row-gap: 10px;
+  }
+  
+  .gallery__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  } 
+
+  .footer {
+    padding: 10px;
+  }
 }

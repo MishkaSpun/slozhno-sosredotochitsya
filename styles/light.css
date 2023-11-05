@@ -9,4 +9,41 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --color-accent:#FFC2E6;
+  --color-bright: #FF8DCB;
+  --color-shadow: #FF0070; 
+  --color-light:#FFF1F7 ;
+  --color-dark: #353430;
+  --color__tittle: var(--color-accent, #FFC2E6);
+  --color__tittle-shadow: var(--color-shadow, #FF0070);
+  --color__decoration: var(--color-dark, #353430);
+  --color__background-text: var(--color-bright, #FF8DCB);
+  --color__question: var(--color-dark, #353430);
+  --color__answer-tittle: var(--color-dark, #353430);
+  --color__answer-text: var(--color-dark, #353430);
+  --background-color: var(--color-light, #FFF1F7);
+  --background-image: url('../images/cover-image-light.png');
+  --rec-visibility: hidden;
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-accent:#FFC2E6;
+    --color-bright: #FF8DCB;
+    --color-shadow: #FF0070; 
+    --color-light:#FFF1F7 ;
+    --color-dark: #353430;
+    --color__tittle: var(--color-accent, #FFC2E6);
+    --color__tittle-shadow: var(--color-shadow, #FF0070);
+    --color__decoration: var(--color-dark, #353430);
+    --color__background-text: var(--color-bright, #FF8DCB);
+    --color__question: var(--color-dark, #353430);
+    --color__answer-tittle: var(--color-dark, #353430);
+    --color__answer-text: var(--color-dark, #353430);
+    --background-color: var(--color-light, #FFF1F7);
+    --background-image: url('../images/cover-image-light.png');
+    --rec-visibility: hidden;
+  }
+}
+
+

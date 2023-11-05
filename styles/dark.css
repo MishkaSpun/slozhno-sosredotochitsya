@@ -9,4 +9,39 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+  --color-accent: #DB00FF;
+  --color-bright: #FF0070;
+  --color-shadow: #FF0070; 
+  --color-light: #F1B2CE;
+  --color-dark: #000028;
+  --color__tittle: var(--color-accent, #DB00FF);
+  --color__tittle-shadow: var(--color-shadow, #FF0070);
+  --color__decoration: var(--color-bright,#FF0070);
+  --color__background-text: var(--color-bright, #FF0070);
+  --color__question: var(--color-bright, #FF0070);
+  --color__answer-tittle: var(--color-dark, #000028);
+  --color__answer-text: var(--color-light, #F1B2CE);
+  --background-color: var(--color-dark, #000028);
+  --background-image: url('../images/cover-image-dark.png');
+  --rec-visibility: visible;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-accent: #DB00FF;
+    --color-bright: #FF0070;
+    --color-shadow: #FF0070; 
+    --color-light: #F1B2CE;
+    --color-dark: #000028;
+    --color__tittle: var(--color-accent, #DB00FF);
+    --color__tittle-shadow: var(--color-shadow, #FF0070);
+    --color__decoration: var(--color-bright,#FF0070);
+    --color__background-text: var(--color-bright, #FF0070);
+    --color__question: var(--color-bright, #FF0070);
+    --color__answer-tittle: var(--color-dark, #000028);
+    --color__answer-text: var(--color-light, #F1B2CE);
+    --background-color: var(--color-dark, #000028);
+    --background-image: url('../images/cover-image-dark.png');
+    --rec-visibility: visible;
+  }
 }
