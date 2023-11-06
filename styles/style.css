@@ -299,6 +299,7 @@
   .footer__tittle {
     display: flex;
     text-shadow: 2px 2px 0px var(--color__tittle-shadow__min);
+  }
 
 }
 
