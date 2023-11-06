@@ -9,6 +9,10 @@
 --color-light: #F1B2CE;
 --color-dark: #000028;
 --color__decoration: var(--color-bright,#FF0070);
+--link-shadow: var(--color-bright, #FF0070);
+--color__tittle-shadow: var(--color-bright, #FF0070);
+--color__tittle-shadow__min: var(--color-bright, #FF0070);
+--color__background-text: var(--color-bright, #FF0070);
 --color__tittle: var(--color-accent, #DB00FF);
 --color__question: var(--color-bright, #FF0070);
 --color__answer-tittle: var(--color-dark, #000028);
