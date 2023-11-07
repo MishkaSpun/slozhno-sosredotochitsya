@@ -27,6 +27,7 @@
     --color-bright__dark: #FF0070;
     --color__tittle: var(--color-accent, #FFC2E6);
     --color__tittle-shadow: var(--color-bright__dark, #FF0070);
+    --color__tittle-shadow__min: var(--color-bright,#FF8DCB);
     --link-shadow: var(--color-bright, #FF8DCB);
     --color__decoration: var(--color-dark, #353430);
     --color__background-text: var(--color-bright, #FF8DCB);

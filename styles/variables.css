@@ -17,6 +17,7 @@
 --color__question: var(--color-bright, #FF0070);
 --color__answer-tittle: var(--color-dark, #000028);
 --color__answer-text: var(--color-light, #F1B2CE);
+--background-color: var(--color-dark, #000028);
 --background-image: url('../images/cover-image-dark.png');
 --rec-visibility: visible;
 }
